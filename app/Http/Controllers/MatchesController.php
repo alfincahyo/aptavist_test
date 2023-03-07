@@ -109,9 +109,9 @@ class MatchesController extends Controller
                 if ($request->home_goal == $request->away_goal) {
                     $away->points = 1;
                 } else if ($request->home_goal > $request->away_goal) {
-                    $away->points = 3;
-                } else {
                     $away->points = 0;
+                } else {
+                    $away->points = 3;
                 }
                 $away->save();
 
